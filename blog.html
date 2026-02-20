@@ -5,16 +5,91 @@
     <title>Blog | Remotizers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Remotizers Blog: Remote Careers, Freelancing, Tech Skills">
-    <link rel="stylesheet" href="style.css">
+    <!-- Favicon (placeholder) -->
     <link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
+    <!-- External stylesheet (optional, kept for consistency) -->
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Blog Card Grid */
+        /* ----- GLOBAL RESET & BASE STYLES ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #1e1e2f;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER & FOOTER (full width) */
+        header {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 0.75rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: border-bottom 0.2s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: #1dbf73;
+        }
+
+        footer {
+            background: #1e1e2f;
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.95rem;
+            margin-top: 3rem;
+        }
+
+        /* MAIN CONTENT CONTAINER (centered) */
+        .blog {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* Blog grid */
         .blog {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
-            padding: 20px 0;
+            gap: 2rem;
         }
 
         @media(min-width: 768px) {
@@ -23,37 +98,68 @@
             }
         }
 
-        /* Card Style */
+        /* heading inside grid spans full width */
+        .blog h2 {
+            grid-column: 1 / -1;
+            font-size: 2.2rem;
+            color: #1e1e2f;
+            border-left: 6px solid #1dbf73;
+            padding-left: 1.2rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        /* CARD STYLES */
         .blog article {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+            padding: 1.8rem;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
         .blog article:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
         }
 
-        /* Post Image */
         .blog .post-img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 16px;
+            background-color: #eaeef2; /* placeholder background */
+            margin-bottom: 1.5rem;
+            border: 1px solid #f0f0f0;
         }
 
-        /* Titles & Text */
         .blog h3 {
             color: #1dbf73;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog h4 {
+            font-size: 1.2rem;
+            color: #2d2d44;
+            margin: 1.2rem 0 0.5rem;
         }
 
         .blog p, .blog ul, .blog ol {
-            margin-bottom: 10px;
-            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #3a3a4e;
+        }
+
+        .blog ul, .blog ol {
+            padding-left: 1.6rem;
+        }
+
+        .blog li {
+            margin-bottom: 0.4rem;
         }
 
         /* Buttons */
@@ -61,215 +167,333 @@
             display: inline-block;
             background-color: #1dbf73;
             color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
+            font-weight: 600;
+            padding: 0.9rem 1.8rem;
+            border-radius: 40px;
             text-decoration: none;
-            margin-top: 10px;
-            transition: 0.3s;
+            margin-top: 1rem;
+            align-self: flex-start;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(29, 191, 115, 0.3);
         }
 
         .blog .btn:hover {
             background-color: #17a05e;
+            transform: scale(1.02);
         }
 
-        /* Email Signup Popup */
+        .blog .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* inline links inside cards */
+        .blog a:not(.btn) {
+            color: #1dbf73;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        /* POPUP */
         .popup {
             display: none;
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
             background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(6px);
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            padding: 1rem;
         }
 
         .popup-content {
             background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 400px;
+            padding: 2.5rem 2rem;
+            border-radius: 32px;
+            max-width: 440px;
+            width: 100%;
             text-align: center;
             position: relative;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+            animation: fadeSlide 0.3s ease;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0.6; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .popup-close {
             position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
+            top: 16px;
+            right: 22px;
+            font-size: 32px;
             cursor: pointer;
+            color: #777;
+            transition: color 0.2s;
+            line-height: 1;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .popup-close:hover {
+            color: #1dbf73;
+            background: #f0f0f0;
+        }
+
+        #signup-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1.5rem;
         }
 
         #signup-form input[type="email"] {
-            width: 80%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 16px;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 60px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: 0.2s;
+            margin-bottom: 0.8rem;
+        }
+
+        #signup-form input[type="email"]:focus {
+            outline: none;
+            border-color: #1dbf73;
+            box-shadow: 0 0 0 3px rgba(29,191,115,0.2);
         }
 
         #signup-form .btn {
-            margin-top: 10px;
-            width: 85%;
+            background-color: #1dbf73;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+            box-shadow: 0 8px 16px rgba(29,191,115,0.3);
+        }
+
+        #signup-form .btn:hover {
+            background-color: #17a05e;
+        }
+
+        .popup small {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            display: block;
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Remotize</h1>
-    <p>Build Remote Skills. Earn Global Income.</p>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <header>
+        <h1>Remotizers</h1>   <!-- Unified with title -->
+        <p>Build Remote Skills. Earn Global Income.</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<section class="blog">
-    <h2>Latest Articles</h2>
+    <!-- Blog grid section (now properly centered) -->
+    <section class="blog">
+        <h2>Latest Articles</h2>
 
-    <!-- Post 1 -->
-    <article>
-        <img src="images/fiverr-start.jpg" alt="Start Freelancing" class="post-img">
-        <h3>How to Start Freelancing on Fiverr and Earn Your First USD</h3>
-        <p>Are you looking to start your freelancing journey but don’t know where to begin? Fiverr is perfect for beginners to showcase their skills and get paid in USD.</p>
-        <h4>Step 1: Create Your Fiverr Account</h4>
-        <p>Sign up on Fiverr for free and complete your profile. Highlight your skills—even if you’re just starting out!</p>
-        <h4>Step 2: Choose Your First Gig</h4>
-        <p>Pick a service you can confidently offer, like writing, graphic design, programming, or digital marketing.</p>
-        <h4>Step 3: Promote Your Services</h4>
-        <p>Share your gigs online. The more visibility you get, the faster you earn.</p>
-        <p><a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank" class="btn">Join Fiverr Now</a></p>
-    </article>
+        <!-- Post 1 -->
+        <article>
+            <img src="images/fiverr-start.jpg" alt="Person starting freelancing on Fiverr" class="post-img">
+            <h3>How to Start Freelancing on Fiverr and Earn Your First USD</h3>
+            <p>Are you looking to start your freelancing journey but don’t know where to begin? Fiverr is perfect for beginners to showcase their skills and get paid in USD.</p>
+            <h4>Step 1: Create Your Fiverr Account</h4>
+            <p>Sign up on Fiverr for free and complete your profile. Highlight your skills—even if you’re just starting out!</p>
+            <h4>Step 2: Choose Your First Gig</h4>
+            <p>Pick a service you can confidently offer, like writing, graphic design, programming, or digital marketing.</p>
+            <h4>Step 3: Promote Your Services</h4>
+            <p>Share your gigs online. The more visibility you get, the faster you earn.</p>
+            <!-- placeholder affiliate link — replace with actual URL -->
+            <p><a href="#" class="btn" target="_blank" rel="noopener">Join Fiverr Now</a></p>
+        </article>
 
-    <!-- Post 2 -->
-    <article>
-        <img src="images/fiverr-services.jpg" alt="Fiverr Services" class="post-img">
-        <h3>Top 5 Fiverr Services You Can Start as a Beginner</h3>
-        <p>Fiverr offers tons of opportunities to earn money online. Here are the top 5 services for beginners:</p>
-        <ol>
-            <li><strong>Writing & Translations:</strong> Blog posts, copywriting, or translation gigs.</li>
-            <li><strong>Graphic Design:</strong> Logo creation, social media graphics, or banners.</li>
-            <li><strong>Digital Marketing:</strong> Social media management, SEO, or ad campaigns.</li>
-            <li><strong>Programming & Tech:</strong> Website building, WordPress setup, or bug fixes.</li>
-            <li><strong>Video & Animation:</strong> Short videos, intros, or editing.</li>
-        </ol>
-        <p><a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank" class="btn">Sign Up on Fiverr</a></p>
-    </article>
+        <!-- Post 2 -->
+        <article>
+            <img src="images/fiverr-services.jpg" alt="Various Fiverr service icons" class="post-img">
+            <h3>Top 5 Fiverr Services You Can Start as a Beginner</h3>
+            <p>Fiverr offers tons of opportunities to earn money online. Here are the top 5 services for beginners:</p>
+            <ol>
+                <li><strong>Writing & Translations:</strong> Blog posts, copywriting, or translation gigs.</li>
+                <li><strong>Graphic Design:</strong> Logo creation, social media graphics, or banners.</li>
+                <li><strong>Digital Marketing:</strong> Social media management, SEO, or ad campaigns.</li>
+                <li><strong>Programming & Tech:</strong> Website building, WordPress setup, or bug fixes.</li>
+                <li><strong>Video & Animation:</strong> Short videos, intros, or editing.</li>
+            </ol>
+            <p><a href="#" class="btn" target="_blank" rel="noopener">Sign Up on Fiverr</a></p>
+        </article>
 
-    <!-- Post 3 -->
-    <article>
-        <img src="images/fiverr-100.jpg" alt="Earn First 100" class="post-img">
-        <h3>How to Earn Your First $100 on Fiverr Quickly</h3>
-        <p>Making your first $100 on Fiverr might seem difficult, but with the right strategy, it’s achievable in just a few weeks.</p>
-        <h4>Tip 1: Pick a Simple Gig</h4>
-        <p>Start with a service you can do quickly and confidently. Beginners often succeed with writing, graphic design, or simple tech tasks.</p>
-        <h4>Tip 2: Set Competitive Prices</h4>
-        <p>Offer affordable packages to attract your first buyers. You can increase your rates as you get reviews.</p>
-        <h4>Tip 3: Promote Everywhere</h4>
-        <p>Share your Fiverr gig on your blog, social media, or online communities to get your first clients fast.</p>
-        <p><a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank" class="btn">Join Fiverr</a></p>
-    </article>
+        <!-- Post 3 -->
+        <article>
+            <img src="images/fiverr-100.jpg" alt="Fiverr earnings display showing $100" class="post-img">
+            <h3>How to Earn Your First $100 on Fiverr Quickly</h3>
+            <p>Making your first $100 on Fiverr might seem difficult, but with the right strategy, it’s achievable in just a few weeks.</p>
+            <h4>Tip 1: Pick a Simple Gig</h4>
+            <p>Start with a service you can do quickly and confidently. Beginners often succeed with writing, graphic design, or simple tech tasks.</p>
+            <h4>Tip 2: Set Competitive Prices</h4>
+            <p>Offer affordable packages to attract your first buyers. You can increase your rates as you get reviews.</p>
+            <h4>Tip 3: Promote Everywhere</h4>
+            <p>Share your Fiverr gig on your blog, social media, or online communities to get your first clients fast.</p>
+            <p><a href="#" class="btn" target="_blank" rel="noopener">Join Fiverr</a></p>
+        </article>
 
-    <!-- Post 4 -->
-    <article>
-        <img src="images/remote-tools.jpg" alt="Remote Tools" class="post-img">
-        <h3>Top 10 Free Tools for Remote Work in 2026</h3>
-        <p>Working remotely is easier with the right tools. Here are the top 10 free tools every remote worker should use:</p>
-        <ul>
-            <li>Trello – Organize projects and tasks visually.</li>
-            <li>Slack – Communicate with your team efficiently.</li>
-            <li>Canva – Create stunning graphics for free.</li>
-            <li>Google Workspace – Docs, Sheets, Gmail in one place.</li>
-            <li>Zoom – Video calls and online meetings.</li>
-            <li>Notion – All-in-one workspace for notes and tasks.</li>
-            <li>Grammarly – Improve writing automatically.</li>
-            <li>Clockify – Track your work hours.</li>
-            <li>Asana – Project management made simple.</li>
-            <li>Fiverr – Hire freelancers for tasks you can’t do yourself. <a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank">Check Fiverr Services</a></li>
-        </ul>
-    </article>
+        <!-- Post 4 -->
+        <article>
+            <img src="images/remote-tools.jpg" alt="Digital tools for remote work" class="post-img">
+            <h3>Top 10 Free Tools for Remote Work in 2026</h3>
+            <p>Working remotely is easier with the right tools. Here are the top 10 free tools every remote worker should use:</p>
+            <ul>
+                <li>Trello – Organize projects and tasks visually.</li>
+                <li>Slack – Communicate with your team efficiently.</li>
+                <li>Canva – Create stunning graphics for free.</li>
+                <li>Google Workspace – Docs, Sheets, Gmail in one place.</li>
+                <li>Zoom – Video calls and online meetings.</li>
+                <li>Notion – All-in-one workspace for notes and tasks.</li>
+                <li>Grammarly – Improve writing automatically.</li>
+                <li>Clockify – Track your work hours.</li>
+                <li>Asana – Project management made simple.</li>
+                <li>Fiverr – Hire freelancers for tasks you can’t do yourself. <a href="#" target="_blank">Check Fiverr Services</a></li>
+            </ul>
+        </article>
 
-    <!-- Post 5 -->
-    <article>
-        <img src="images/make-money.jpg" alt="Make Money Online" class="post-img">
-        <h3>How to Make Money Online Without Experience</h3>
-        <p>Starting online income can feel intimidating if you have no experience. Here are practical ways to start earning today:</p>
-        <ul>
-            <li>Freelance Writing – Start small on Fiverr or Upwork.</li>
-            <li>Graphic Design – Use Canva or free tools.</li>
-            <li>Social Media Management – Manage small business accounts remotely.</li>
-            <li>Sell Digital Products – Guides, templates, printables.</li>
-            <li>Fiverr Services – Offer simple tasks like data entry or basic design. <a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank">Start Selling on Fiverr</a></li>
-        </ul>
-    </article>
+        <!-- Post 5 -->
+        <article>
+            <img src="images/make-money.jpg" alt="Ways to make money online" class="post-img">
+            <h3>How to Make Money Online Without Experience</h3>
+            <p>Starting online income can feel intimidating if you have no experience. Here are practical ways to start earning today:</p>
+            <ul>
+                <li>Freelance Writing – Start small on Fiverr or Upwork.</li>
+                <li>Graphic Design – Use Canva or free tools.</li>
+                <li>Social Media Management – Manage small business accounts remotely.</li>
+                <li>Sell Digital Products – Guides, templates, printables.</li>
+                <li>Fiverr Services – Offer simple tasks like data entry or basic design. <a href="#" target="_blank">Start Selling on Fiverr</a></li>
+            </ul>
+        </article>
 
-    <!-- Post 6 -->
-    <article>
-        <img src="images/freelance-platforms.jpg" alt="Freelance Platforms" class="post-img">
-        <h3>Best Freelance Platforms Besides Fiverr</h3>
-        <p>While Fiverr is great, it’s smart to diversify your freelancing opportunities. Here are other platforms to explore:</p>
-        <ul>
-            <li>Upwork – Longer-term projects and higher-paying gigs.</li>
-            <li>Freelancer – Wide variety of freelance jobs for beginners.</li>
-            <li>PeoplePerHour – Flexible short-term projects you can complete quickly.</li>
-            <li>99Designs – Focused on design and creative work.</li>
-            <li>Fiverr – Still a top choice for quick gigs and beginner-friendly projects. <a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank">Check Fiverr Services</a></li>
-        </ul>
-    </article>
+        <!-- Post 6 -->
+        <article>
+            <img src="images/freelance-platforms.jpg" alt="Logos of freelance platforms" class="post-img">
+            <h3>Best Freelance Platforms Besides Fiverr</h3>
+            <p>While Fiverr is great, it’s smart to diversify your freelancing opportunities. Here are other platforms to explore:</p>
+            <ul>
+                <li>Upwork – Longer-term projects and higher-paying gigs.</li>
+                <li>Freelancer – Wide variety of freelance jobs for beginners.</li>
+                <li>PeoplePerHour – Flexible short-term projects you can complete quickly.</li>
+                <li>99Designs – Focused on design and creative work.</li>
+                <li>Fiverr – Still a top choice for quick gigs and beginner-friendly projects. <a href="#" target="_blank">Check Fiverr Services</a></li>
+            </ul>
+        </article>
+    </section>
 
-</section>
+    <footer>
+        <p>© 2026 Remotizers | Evance Katanga</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2026 Remotizers | Evance Katanga</p>
-</footer>
-
-<!-- Email Signup Popup -->
-<div id="email-popup" class="popup">
-    <div class="popup-content">
-        <span class="popup-close">&times;</span>
-        <h3>Get Free Remote Work Tips!</h3>
-        <p>Subscribe to our newsletter and receive guides, tips, and exclusive Fiverr resources.</p>
-        <form id="signup-form">
-            <input type="email" id="email" placeholder="Your email address" required>
-            <button type="submit" class="btn">Subscribe</button>
-        </form>
-        <p style="font-size:12px;color:#555;margin-top:10px;">No spam. Unsubscribe anytime.</p>
+    <!-- Email Signup Popup (improved accessibility) -->
+    <div id="email-popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <div class="popup-content">
+            <button class="popup-close" aria-label="Close newsletter popup">&times;</button>
+            <h3 id="popup-title">📬 Get Free Remote Work Tips!</h3>
+            <p>Subscribe to our newsletter and receive guides, tips, and exclusive Fiverr resources.</p>
+            <form id="signup-form">
+                <input type="email" id="email" placeholder="Your email address" required aria-label="Email address">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <small>No spam. Unsubscribe anytime.</small>
+        </div>
     </div>
-</div>
 
-<script>
-// Show popup after 5 seconds
-window.addEventListener("load", function() {
-    setTimeout(function() {
-        document.getElementById("email-popup").style.display = "flex";
-    }, 5000);
-});
+    <script>
+        (function() {
+            // Show popup after 5 seconds (only if not already closed)
+            const popup = document.getElementById('email-popup');
+            const closeBtn = document.querySelector('.popup-close');
+            const signupForm = document.getElementById('signup-form');
+            const emailInput = document.getElementById('email');
 
-// Close popup
-document.querySelector(".popup-close").addEventListener("click", function() {
-    document.getElementById("email-popup").style.display = "none";
-});
+            // Ensure popup is hidden initially (inline style might override, but we keep display none in CSS)
+            // Show after 5 sec
+            let popupTimer = setTimeout(() => {
+                if (popup) popup.style.display = 'flex';
+            }, 5000);
 
-// Close popup when clicking outside content
-window.addEventListener("click", function(e) {
-    if (e.target.id === "email-popup") {
-        document.getElementById("email-popup").style.display = "none";
-    }
-});
+            // Close popup functions
+            function closePopup() {
+                if (popup) popup.style.display = 'none';
+                clearTimeout(popupTimer); // cancel if already shown
+            }
 
-// Form submission
-document.getElementById("signup-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const email = document.getElementById("email").value;
-    alert(`Thanks! You are subscribed with: ${email}`);
-    document.getElementById("email-popup").style.display = "none";
-    document.getElementById("signup-form").reset();
-});
-</script>
+            // Close with button
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closePopup);
+            }
 
+            // Close when clicking outside popup content
+            window.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    closePopup();
+                }
+            });
+
+            // Handle form submission
+            if (signupForm) {
+                signupForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = emailInput.value.trim();
+                    if (email) {
+                        alert(`✨ Thanks! You're subscribed with: ${email}`);
+                        closePopup();
+                        signupForm.reset();
+                    } else {
+                        alert('Please enter a valid email.');
+                    }
+                });
+            }
+
+            // Optional: close with ESC key
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && popup.style.display === 'flex') {
+                    closePopup();
+                }
+            });
+        })();
+    </script>
+
+    <!-- 
+        IMPROVEMENTS MADE:
+        1. Fixed grid layout: h2 spans full width (grid-column: 1/-1)
+        2. Added global styles (body, header, footer) for consistent look
+        3. Changed h1 from "Remotize" to "Remotizers" to match brand
+        4. Centered blog content with max-width and auto margins
+        5. Replaced broken affiliate links with "#" placeholders (replace with real URLs)
+        6. Improved popup accessibility (role dialog, aria-label, ESC close)
+        7. Smoother animations and hover states
+        8. Added aspect-ratio to images for consistency
+        9. Better color contrast and typography
+        10. Ensured responsive grid works on all devices
+    -->
 </body>
 </html>
