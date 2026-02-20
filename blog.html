@@ -7,9 +7,57 @@
     <meta name="description" content="Remotizers Blog: Remote Careers, Freelancing, Tech Skills">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
+
     <style>
-        /* Button Style */
-        .btn {
+        /* Blog Card Grid */
+        .blog {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        @media(min-width: 768px) {
+            .blog {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Card Style */
+        .blog article {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Post Image */
+        .blog .post-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Titles & Text */
+        .blog h3 {
+            color: #1dbf73;
+            margin-bottom: 10px;
+        }
+
+        .blog p, .blog ul, .blog ol {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .blog .btn {
             display: inline-block;
             background-color: #1dbf73;
             color: white;
@@ -19,22 +67,9 @@
             margin-top: 10px;
             transition: 0.3s;
         }
-        .btn:hover {
+
+        .blog .btn:hover {
             background-color: #17a05e;
-        }
-        /* Post Image Style */
-        .post-img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        /* Blog Section Styling */
-        .blog article {
-            border-bottom: 1px solid #ddd;
-            padding: 20px 0;
-        }
-        .blog h3 {
-            color: #1dbf73;
         }
     </style>
 </head>
@@ -55,8 +90,8 @@
 
     <!-- Post 1 -->
     <article>
-        <h3>How to Start Freelancing on Fiverr and Earn Your First USD</h3>
         <img src="images/fiverr-start.jpg" alt="Start Freelancing" class="post-img">
+        <h3>How to Start Freelancing on Fiverr and Earn Your First USD</h3>
         <p>Are you looking to start your freelancing journey but don’t know where to begin? Fiverr is perfect for beginners to showcase their skills and get paid in USD.</p>
         <h4>Step 1: Create Your Fiverr Account</h4>
         <p>Sign up on Fiverr for free and complete your profile. Highlight your skills—even if you’re just starting out!</p>
@@ -69,8 +104,8 @@
 
     <!-- Post 2 -->
     <article>
-        <h3>Top 5 Fiverr Services You Can Start as a Beginner</h3>
         <img src="images/fiverr-services.jpg" alt="Fiverr Services" class="post-img">
+        <h3>Top 5 Fiverr Services You Can Start as a Beginner</h3>
         <p>Fiverr offers tons of opportunities to earn money online. Here are the top 5 services for beginners:</p>
         <ol>
             <li><strong>Writing & Translations:</strong> Blog posts, copywriting, or translation gigs.</li>
@@ -84,8 +119,8 @@
 
     <!-- Post 3 -->
     <article>
-        <h3>How to Earn Your First $100 on Fiverr Quickly</h3>
         <img src="images/fiverr-100.jpg" alt="Earn First 100" class="post-img">
+        <h3>How to Earn Your First $100 on Fiverr Quickly</h3>
         <p>Making your first $100 on Fiverr might seem difficult, but with the right strategy, it’s achievable in just a few weeks.</p>
         <h4>Tip 1: Pick a Simple Gig</h4>
         <p>Start with a service you can do quickly and confidently. Beginners often succeed with writing, graphic design, or simple tech tasks.</p>
@@ -98,8 +133,8 @@
 
     <!-- Post 4 -->
     <article>
-        <h3>Top 10 Free Tools for Remote Work in 2026</h3>
         <img src="images/remote-tools.jpg" alt="Remote Tools" class="post-img">
+        <h3>Top 10 Free Tools for Remote Work in 2026</h3>
         <p>Working remotely is easier with the right tools. Here are the top 10 free tools every remote worker should use:</p>
         <ul>
             <li>Trello – Organize projects and tasks visually.</li>
@@ -117,8 +152,8 @@
 
     <!-- Post 5 -->
     <article>
-        <h3>How to Make Money Online Without Experience</h3>
         <img src="images/make-money.jpg" alt="Make Money Online" class="post-img">
+        <h3>How to Make Money Online Without Experience</h3>
         <p>Starting online income can feel intimidating if you have no experience. Here are practical ways to start earning today:</p>
         <ul>
             <li>Freelance Writing – Start small on Fiverr or Upwork.</li>
@@ -131,8 +166,8 @@
 
     <!-- Post 6 -->
     <article>
-        <h3>Best Freelance Platforms Besides Fiverr</h3>
         <img src="images/freelance-platforms.jpg" alt="Freelance Platforms" class="post-img">
+        <h3>Best Freelance Platforms Besides Fiverr</h3>
         <p>While Fiverr is great, it’s smart to diversify your freelancing opportunities. Here are other platforms to explore:</p>
         <ul>
             <li>Upwork – Longer-term projects and higher-paying gigs.</li>
@@ -142,6 +177,7 @@
             <li>Fiverr – Still a top choice for quick gigs and beginner-friendly projects. <a href="YOUR-FIVERR-AFFILIATE-LINK" target="_blank">Check Fiverr Services</a></li>
         </ul>
     </article>
+
 </section>
 
 <footer>
