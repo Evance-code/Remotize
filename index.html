@@ -1,27 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Remotize</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Build Remote Skills. Earn Global Income.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555"
-     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>Remotize – Build Remote Skills. Earn Global Income.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn tech skills, freelancing, and remote jobs that pay in USD. Start your remote journey today.">
+<link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
 
-    <!-- Google Analytics -->
-    <!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQCVPJR8CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZQCVPJR8CD');
 </script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --primary-dark: #1e1e2f;
+    --primary-green: #1dbf73;
+    --green-hover: #17a05e;
+    --text-dark: #1e1e2f;
+    --text-soft: #3a3a4e;
+    --bg-light: #fafafa;
+    --card-bg: #ffffff;
+    --spacing-unit: 1rem;
+    --border-radius: 16px;
+    --transition: 0.25s ease;
+    --shadow: 0 12px 28px rgba(0,0,0,0.05);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a45);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  header p { font-size: 1.2rem; opacity:0.9; margin-bottom:1rem; }
+  nav a {
+    color:white;
+    text-decoration:none;
+    margin:0 1rem;
+    padding-bottom:2px;
+    border-bottom:2px solid transparent;
+    transition: border-color var(--transition);
+  }
+  nav a:hover, nav a:focus { border-bottom-color: var(--primary-green); outline:none; }
+
+  main { flex:1; width:100%; max-width:1200px; margin:2rem auto; padding:0 1.5rem; display:flex; flex-direction:column; gap:4rem; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a45);
+    color:white;
+    text-align:center;
+    padding:4rem 1rem;
+    border-radius: var(--border-radius);
+  }
+  .hero h2 { font-size:2.5rem; margin-bottom:1rem; }
+  .hero p { font-size:1.2rem; margin-bottom:2rem; opacity:0.9; }
+  .btn {
+    display:inline-block;
+    background-color: var(--primary-green);
+    color:white;
+    padding:0.9rem 2rem;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    transition: background-color var(--transition), transform 0.1s;
+    box-shadow: 0 4px 8px rgba(29,191,115,0.3);
+  }
+  .btn:hover, .btn:focus { background-color: var(--green-hover); transform: scale(1.05); outline:none; }
+  .btn:active { transform: scale(0.98); }
+
+  /* Features */
+  .features { display:flex; justify-content: space-between; gap:2rem; flex-wrap:wrap; }
+  .feature {
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    text-align:center;
+  }
+  .feature:hover { transform: translateY(-5px); box-shadow: 0 20px 35px rgba(0,0,0,0.08); }
+  .feature h3 { margin-bottom:1rem; color: var(--primary-dark); }
+  .feature p { color: var(--text-soft); }
+
+  /* Team & Mission */
+  .team-mission { display:flex; gap:3rem; flex-wrap:wrap; align-items:center; }
+  .team-card { flex:1; min-width:250px; background:white; padding:2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); text-align:center; transition: transform var(--transition); }
+  .team-card:hover { transform: translateY(-5px); }
+  .team-card img { width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
+  .team-card h4 { margin-bottom:0.5rem; color: var(--primary-dark); }
+  .team-card p { color: var(--text-soft); font-size:0.95rem; }
+
+  /* CTA Section */
+  .cta {
+    background: var(--primary-green);
+    color:white;
+    text-align:center;
+    padding:3rem 1rem;
+    border-radius: var(--border-radius);
+  }
+  .cta h2 { font-size:2rem; margin-bottom:1rem; }
+  .cta p { font-size:1.1rem; margin-bottom:1.5rem; }
+
+  /* Newsletter */
+  .newsletter { text-align:center; margin-top:2rem; }
+  .newsletter input[type="email"] {
+    padding:0.8rem 1rem; border-radius:50px; border:none; width:250px; max-width:90%;
+    margin-right:0.5rem; font-size:1rem;
+  }
+  .newsletter button { padding:0.8rem 1.5rem; border:none; border-radius:50px; background:white; color:var(--primary-green); font-weight:600; cursor:pointer; transition:0.2s; }
+  .newsletter button:hover { background:#e0e0e0; }
+
+  footer {
+    background: var(--primary-dark);
+    color:#ccc;
+    text-align:center;
+    padding:2rem 1rem;
+    font-size:0.95rem;
+  }
+  footer a { color:#ccc; text-decoration:underline; margin:0 0.5rem; }
+
+  /* Responsive */
+  @media (max-width:768px){ .features, .team-mission { flex-direction:column; align-items:center; } .hero h2 { font-size:2rem; } .hero p { font-size:1rem; } }
+</style>
 </head>
 <body>
+
 <header>
     <h1>Remotize</h1>
     <p>Build Remote Skills. Earn Global Income.</p>
@@ -32,76 +159,70 @@
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555"
-     crossorigin="anonymous"></script>
-<!-- aa -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1866481182617555"
-     data-ad-slot="2551943732"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-<section class="hero">
-    <h2>Start Your Remote Journey Today</h2>
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <h2 id="hero-heading">Start Your Remote Journey Today</h2>
     <p>Learn tech skills, freelancing, and remote jobs that pay in USD.</p>
     <a href="blog.html" class="btn">Read Articles</a>
-</section>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555"
-     crossorigin="anonymous"></script>
-<!-- aa -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-1866481182617555"
-     data-ad-slot="3673453717"></ins>
+  </section>
 
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <!-- Features -->
+  <section class="features" aria-label="Our main features">
+    <div class="feature"><h3>Remote Careers</h3><p>Step-by-step guides to start working remotely in tech and freelancing.</p></div>
+    <div class="feature"><h3>Tools & Reviews</h3><p>Best tools and software to grow your skills and productivity.</p></div>
+    <div class="feature"><h3>Productivity</h3><p>Time management tips to stay focused while working remotely.</p></div>
+  </section>
 
-<section class="features">
-    <div class="feature">
-        <h3>Remote Careers</h3>
-        <p>Step-by-step guides to start working remotely in tech and freelancing.</p>
+  <!-- Team & Mission -->
+  <section class="team-mission" aria-labelledby="team-heading">
+    <h2 id="team-heading" style="width:100%; text-align:center; margin-bottom:2rem;">Our Team & Mission</h2>
+    <div class="team-card">
+      <img src="team1.jpg" alt="Founder photo">
+      <h4>Evance Katanga</h4>
+      <p>Founder & CEO – Passionate about empowering individuals to earn remotely.</p>
     </div>
-    <div class="feature">
-        <h3>Tools & Reviews</h3>
-        <p>Best tools and software to grow your skills and productivity.</p>
+    <div class="team-card">
+      <img src="team2.jpg" alt="Team member photo">
+      <h4>Jane Doe</h4>
+      <p>Content Lead – Curates best guides and reviews to help our readers succeed.</p>
     </div>
-    <div class="feature">
-        <h3>Productivity</h3>
-        <p>Time management tips to stay focused while working remotely.</p>
+    <div class="team-card">
+      <img src="team3.jpg" alt="Team member photo">
+      <h4>John Smith</h4>
+      <p>Community Manager – Supports our audience and organizes learning events.</p>
     </div>
-</section>
+  </section>
 
-<section class="cta">
-    <h2>Get Your Free Starter Checklist</h2>
+  <!-- Newsletter CTA -->
+  <section class="cta" aria-labelledby="cta-heading">
+    <h2 id="cta-heading">Get Your Free Starter Checklist</h2>
     <p>Download our PDF guide to kickstart your remote career.</p>
     <a href="#" class="btn">Download Free PDF</a>
-</section>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555"
-     crossorigin="anonymous"></script>
-<!-- aa -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1866481182617555"
-     data-ad-slot="2551943732"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email" aria-label="Email address">
+      <button type="button">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- AdSense -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1866481182617555"
+       data-ad-slot="2551943732"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</main>
 
 <footer>
-    <p>&copy; 2026 Remotize </p>
+    <p>&copy; 2026 Remotize</p>
     <a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a>
+    <a href="terms.html">Terms & Conditions</a>
 </footer>
+
 </body>
 </html>
