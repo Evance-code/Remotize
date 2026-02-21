@@ -1,276 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About Remotize – Empowering Remote Careers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Remotize: our mission to help you build remote skills and earn global income through freelancing and online work.">
-    <meta name="author" content="Remotize Team">
-    <meta name="theme-color" content="#1e1e2f">
+<meta charset="UTF-8">
+<title>About Remotize – Empowering Remote Careers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about Remotize: our mission to help you build remote skills and earn global income through freelancing and online work.">
+<meta name="author" content="Remotize Team">
+<meta name="theme-color" content="#1e1e2f">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://remotize.com/about.html">
-    <meta property="og:title" content="About Remotize – Remote Work & Freelancing Guides">
-    <meta property="og:description" content="We empower individuals with knowledge and tools to achieve financial independence through remote work.">
-    <meta property="og:image" content="https://remotize.com/images/about-social.jpg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://remotize.com/about.html">
+<meta property="og:title" content="About Remotize – Remote Work & Freelancing Guides">
+<meta property="og:description" content="We empower individuals with knowledge and tools to achieve financial independence through remote work.">
+<meta property="og:image" content="https://remotize.com/images/about-social.jpg">
 
-    <!-- Favicon (modern sizes) -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Google tag (gtag.js) - Load with async -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQCVPJR8CD"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ZQCVPJR8CD');
-    </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQCVPJR8CD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZQCVPJR8CD');
+</script>
 
-    <!-- AdSense script – loaded once in head -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
 
-    <style>
-        /* ----- MODERN CSS WITH VARIABLES (matching blog page) ----- */
-        :root {
-            --primary-dark: #1e1e2f;
-            --primary-green: #1dbf73;
-            --green-hover: #17a05e;
-            --text-dark: #1e1e2f;
-            --text-soft: #3a3a4e;
-            --bg-light: #fafafa;
-            --card-bg: #ffffff;
-            --border-light: rgba(0,0,0,0.02);
-            --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
-            --spacing-unit: 1rem;
-            --border-radius-card: 24px;
-            --border-radius-btn: 40px;
-            --transition-default: 0.25s ease;
-        }
+<style>
+  /* ---- Modern CSS with Variables ---- */
+  :root {
+    --primary-dark: #1e1e2f;
+    --primary-green: #1dbf73;
+    --green-hover: #17a05e;
+    --text-dark: #1e1e2f;
+    --text-soft: #3a3a4e;
+    --bg-light: #fafafa;
+    --card-bg: #ffffff;
+    --border-light: rgba(0,0,0,0.05);
+    --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0,0,0,0.02);
+    --spacing-unit: 1rem;
+    --border-radius-card: 24px;
+    --border-radius-btn: 40px;
+    --transition-default: 0.25s ease;
+    --focus-color: #17a05e;
+  }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-        body {
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-        /* Header & Footer (same as blog) */
-        header {
-            background: var(--primary-dark);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #2a2a45 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
 
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.25rem;
-        }
+  header h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+  }
 
-        nav {
-            margin-top: 0.75rem;
-        }
+  nav {
+    margin-top: 0.75rem;
+  }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            transition: border-color var(--transition-default);
-        }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition-default);
+  }
 
-        nav a:hover {
-            border-bottom-color: var(--primary-green);
-        }
+  nav a:hover,
+  nav a:focus {
+    border-bottom-color: var(--primary-green);
+    outline: none;
+  }
 
-        nav a[aria-current="page"] {
-            border-bottom-color: var(--primary-green);
-        }
+  nav a[aria-current="page"] {
+    border-bottom-color: var(--primary-green);
+  }
 
-        footer {
-            background: var(--primary-dark);
-            color: #ccc;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.95rem;
-            margin-top: 3rem;
-        }
+  /* Main content */
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-        footer a {
-            color: #ccc;
-            text-decoration: underline;
-        }
+  /* About section */
+  .about {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-sm);
+    padding: 3rem 2.5rem;
+    border: 1px solid var(--border-light);
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+  }
 
-        /* Main content */
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            width: 100%;
-            flex: 1;
-        }
+  .about:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 35px rgba(0,0,0,0.08);
+  }
 
-        /* About section */
-        .about {
-            background: var(--card-bg);
-            border-radius: var(--border-radius-card);
-            box-shadow: var(--shadow-sm);
-            padding: 3rem 2.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-light);
-            transition: transform var(--transition-default), box-shadow var(--transition-default);
-        }
+  .about h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    border-left: 6px solid var(--primary-green);
+    padding-left: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
 
-        .about:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.08);
-        }
+  .about p {
+    font-size: 1.2rem;
+    color: var(--text-soft);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
 
-        @media (prefers-reduced-motion: reduce) {
-            .about:hover {
-                transform: none;
-            }
-        }
+  .about strong {
+    color: var(--primary-dark);
+  }
 
-        .about h2 {
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-            border-left: 6px solid var(--primary-green);
-            padding-left: 1.2rem;
-            margin-bottom: 1.8rem;
-        }
+  /* Image */
+  .about-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 2rem 0 1rem;
+    box-shadow: var(--shadow-sm);
+  }
 
-        .about p {
-            font-size: 1.2rem;
-            color: var(--text-soft);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    padding: 0.9rem 2rem;
+    border-radius: var(--border-radius-btn);
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color var(--transition-default), transform 0.1s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(29, 191, 115, 0.3);
+  }
 
-        .about strong {
-            color: var(--primary-dark);
-        }
+  .btn:hover,
+  .btn:focus {
+    background-color: var(--green-hover);
+    transform: scale(1.02);
+    outline: none;
+  }
 
-        /* Optional image */
-        .about-image {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin: 2rem 0 1rem;
-            box-shadow: var(--shadow-sm);
-        }
+  .btn:active {
+    transform: scale(0.98);
+  }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: white;
-            font-weight: 600;
-            padding: 0.9rem 2rem;
-            border-radius: var(--border-radius-btn);
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background-color var(--transition-default), transform 0.1s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(29, 191, 115, 0.3);
-        }
+  /* Footer */
+  footer {
+    background: var(--primary-dark);
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
 
-        .btn:hover {
-            background-color: var(--green-hover);
-            transform: scale(1.02);
-        }
+  footer a {
+    color: #ccc;
+    text-decoration: underline;
+  }
 
-        .btn:active {
-            transform: scale(0.98);
-        }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about h2 {
+      font-size: 2rem;
+    }
+    .about p {
+      font-size: 1.1rem;
+    }
+  }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .about {
-                padding: 2rem 1.5rem;
-            }
-            .about h2 {
-                font-size: 2rem;
-            }
-            .about p {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about:hover {
+      transform: none;
+      transition: none;
+    }
+    .btn {
+      transition: none;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Remotize</h1>
-        <p>Build Remote Skills. Earn Global Income.</p>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html" aria-current="page">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Remotize</h2>
-            <!-- Optional image to make the page visually engaging -->
-            <img src="about-team.jpg" 
-                 srcset="about-team-640w.webp 640w, about-team-1280w.webp 1280w"
-                 sizes="(max-width: 768px) 100vw, 800px"
-                 alt="Diverse remote team collaborating online" 
-                 class="about-image" 
-                 loading="lazy"
-                 onerror="this.style.display='none'"> <!-- fallback if image missing -->
+<header>
+  <h1>Remotize</h1>
+  <p>Build Remote Skills. Earn Global Income.</p>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-            <p>Welcome to <strong>Remotize</strong>, your trusted guide to remote work, freelancing, and online income opportunities. Our mission is to empower individuals with knowledge, tools, and opportunities to build sustainable online income streams. We believe that anyone with internet access and determination can create financial independence through remote work.</p>
-            <p>Whether you want to work from home, travel the world, or create a side income, Remotize gives you the roadmap to get started and grow professionally. Our team curates the best practices, platform reviews, and actionable tips to help you succeed in the digital economy.</p>
-            
-            <!-- Call to action linking to blog -->
-            <a href="blog.html" class="btn" aria-label="Read our latest articles on freelancing and remote work">Explore Our Blog</a>
-        </section>
+<main>
+  <section class="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Remotize</h2>
 
-        <!-- Single AdSense placement (optional) -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1866481182617555"
-             data-ad-slot="2551943732"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </main>
+    <figure>
+      <picture>
+        <source srcset="about-team-1280w.webp 1280w, about-team-640w.webp 640w" type="image/webp">
+        <img src="about-team.jpg" alt="Diverse remote team collaborating online" class="about-image" loading="lazy" onerror="this.style.display='none'">
+      </picture>
+    </figure>
 
-    <footer>
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms & Conditions</a>
-        <p>© 2026 Remotize</p>
-    </footer>
+    <p>Welcome to <strong>Remotize</strong>, your trusted guide to remote work, freelancing, and online income opportunities. Our mission is to empower individuals with knowledge, tools, and opportunities to build sustainable online income streams. We believe that anyone with internet access and determination can create financial independence through remote work.</p>
 
-    <!-- Optional: defer any additional scripts (none needed) -->
+    <p>Whether you want to work from home, travel the world, or create a side income, Remotize provides a roadmap to get started and grow professionally. Our team curates best practices, platform reviews, and actionable tips to help you succeed in the digital economy.</p>
+
+    <a href="blog.html" class="btn" aria-label="Read our latest articles on freelancing and remote work">Explore Our Blog</a>
+  </section>
+
+  <!-- AdSense -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1866481182617555"
+       data-ad-slot="2551943732"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</main>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms & Conditions</a>
+  <p>© 2026 Remotize</p>
+</footer>
+
 </body>
 </html>
