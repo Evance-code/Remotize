@@ -2,226 +2,250 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Remotize – Build Remote Skills. Earn Global Income.</title>
+<title>Our Team – Remotize</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn tech skills, freelancing, and remote jobs that pay in USD. Start your remote journey today.">
-<link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
+<meta name="description" content="Meet the leadership team behind Remotize – empowering Africa to earn globally through remote skills.">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQCVPJR8CD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZQCVPJR8CD');
-</script>
-
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
+<link rel="icon" href="remotizers-favicon.ico">
 
 <style>
-  :root {
-    --primary-dark: #1e1e2f;
-    --primary-green: #1dbf73;
-    --green-hover: #17a05e;
-    --text-dark: #1e1e2f;
-    --text-soft: #3a3a4e;
-    --bg-light: #fafafa;
-    --card-bg: #ffffff;
-    --spacing-unit: 1rem;
-    --border-radius: 16px;
-    --transition: 0.25s ease;
-    --shadow: 0 12px 28px rgba(0,0,0,0.05);
-  }
+:root {
+  --primary-dark: #1e1e2f;
+  --primary-green: #1dbf73;
+  --green-hover: #17a05e;
+  --bg-light: #f8f9fc;
+  --card-bg: #ffffff;
+  --text-soft: #555;
+  --radius: 18px;
+  --shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
 
-  * { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-light);
+  color: var(--primary-dark);
+}
 
-  header {
-    background: linear-gradient(135deg, #1e1e2f, #2a2a45);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
+header {
+  background: linear-gradient(135deg,#1e1e2f,#2a2a45);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-  header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.2rem; opacity:0.9; margin-bottom:1rem; }
-  nav a {
-    color:white;
-    text-decoration:none;
-    margin:0 1rem;
-    padding-bottom:2px;
-    border-bottom:2px solid transparent;
-    transition: border-color var(--transition);
-  }
-  nav a:hover, nav a:focus { border-bottom-color: var(--primary-green); outline:none; }
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
-  main { flex:1; width:100%; max-width:1200px; margin:2rem auto; padding:0 1.5rem; display:flex; flex-direction:column; gap:4rem; }
+header p {
+  opacity: 0.85;
+}
 
-  /* Hero */
-  .hero {
-    background: linear-gradient(135deg, #1e1e2f, #2a2a45);
-    color:white;
-    text-align:center;
-    padding:4rem 1rem;
-    border-radius: var(--border-radius);
-  }
-  .hero h2 { font-size:2.5rem; margin-bottom:1rem; }
-  .hero p { font-size:1.2rem; margin-bottom:2rem; opacity:0.9; }
-  .btn {
-    display:inline-block;
-    background-color: var(--primary-green);
-    color:white;
-    padding:0.9rem 2rem;
-    border-radius:50px;
-    font-weight:600;
-    text-decoration:none;
-    transition: background-color var(--transition), transform 0.1s;
-    box-shadow: 0 4px 8px rgba(29,191,115,0.3);
-  }
-  .btn:hover, .btn:focus { background-color: var(--green-hover); transform: scale(1.05); outline:none; }
-  .btn:active { transform: scale(0.98); }
+main {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
 
-  /* Features */
-  .features { display:flex; justify-content: space-between; gap:2rem; flex-wrap:wrap; }
-  .feature {
-    flex:1;
-    min-width:250px;
-    background:white;
-    padding:2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: transform var(--transition), box-shadow var(--transition);
-    text-align:center;
-  }
-  .feature:hover { transform: translateY(-5px); box-shadow: 0 20px 35px rgba(0,0,0,0.08); }
-  .feature h3 { margin-bottom:1rem; color: var(--primary-dark); }
-  .feature p { color: var(--text-soft); }
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
-  /* Team & Mission */
-  .team-mission { display:flex; gap:3rem; flex-wrap:wrap; align-items:center; }
-  .team-card { flex:1; min-width:250px; background:white; padding:2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); text-align:center; transition: transform var(--transition); }
-  .team-card:hover { transform: translateY(-5px); }
-  .team-card img { width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
-  .team-card h4 { margin-bottom:0.5rem; color: var(--primary-dark); }
-  .team-card p { color: var(--text-soft); font-size:0.95rem; }
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-  /* CTA Section */
-  .cta {
-    background: var(--primary-green);
-    color:white;
-    text-align:center;
-    padding:3rem 1rem;
-    border-radius: var(--border-radius);
-  }
-  .cta h2 { font-size:2rem; margin-bottom:1rem; }
-  .cta p { font-size:1.1rem; margin-bottom:1.5rem; }
+.section-title p {
+  color: var(--text-soft);
+}
 
-  /* Newsletter */
-  .newsletter { text-align:center; margin-top:2rem; }
-  .newsletter input[type="email"] {
-    padding:0.8rem 1rem; border-radius:50px; border:none; width:250px; max-width:90%;
-    margin-right:0.5rem; font-size:1rem;
-  }
-  .newsletter button { padding:0.8rem 1.5rem; border:none; border-radius:50px; background:white; color:var(--primary-green); font-weight:600; cursor:pointer; transition:0.2s; }
-  .newsletter button:hover { background:#e0e0e0; }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
 
-  footer {
-    background: var(--primary-dark);
-    color:#ccc;
-    text-align:center;
-    padding:2rem 1rem;
-    font-size:0.95rem;
-  }
-  footer a { color:#ccc; text-decoration:underline; margin:0 0.5rem; }
+.team-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Responsive */
-  @media (max-width:768px){ .features, .team-mission { flex-direction:column; align-items:center; } .hero h2 { font-size:2rem; } .hero p { font-size:1rem; } }
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.role {
+  display: inline-block;
+  background: var(--primary-green);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  margin: 0 6px;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: var(--primary-green);
+}
+
+.cta-section {
+  margin-top: 5rem;
+  text-align: center;
+  background: var(--primary-green);
+  color: white;
+  padding: 3rem 1rem;
+  border-radius: var(--radius);
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary-green);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #eaeaea;
+}
+
+footer {
+  background: var(--primary-dark);
+  color: #ccc;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Remotize</h1>
-    <p>Build Remote Skills. Earn Global Income.</p>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <h1>Our Leadership Team</h1>
+  <p>Building Africa’s Remote Career Movement</p>
 </header>
 
 <main>
-  <!-- Hero -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <h2 id="hero-heading">Start Your Remote Journey Today</h2>
-    <p>Learn tech skills, freelancing, and remote jobs that pay in USD.</p>
-    <a href="blog.html" class="btn">Read Articles</a>
-  </section>
 
-  <!-- Features -->
-  <section class="features" aria-label="Our main features">
-    <div class="feature"><h3>Remote Careers</h3><p>Step-by-step guides to start working remotely in tech and freelancing.</p></div>
-    <div class="feature"><h3>Tools & Reviews</h3><p>Best tools and software to grow your skills and productivity.</p></div>
-    <div class="feature"><h3>Productivity</h3><p>Time management tips to stay focused while working remotely.</p></div>
-  </section>
+<div class="section-title">
+  <h2>Meet the People Behind Remotize</h2>
+  <p>A passionate team empowering Africans to earn globally.</p>
+</div>
 
-  <!-- Team & Mission -->
-  <section class="team-mission" aria-labelledby="team-heading">
-    <h2 id="team-heading" style="width:100%; text-align:center; margin-bottom:2rem;">Our Team & Mission</h2>
-    <div class="team-card">
-      <img src="Profile.jpeg" alt="Founder photo">
-      <h4>Evance Katanga</h4>
-      <p>Founder & CEO – Passionate about empowering individuals to earn remotely.</p>
+<div class="team-grid">
+
+  <div class="team-card">
+    <img src="Profile.jpeg" alt="Evance Katanga">
+    <h3>Evance Katanga</h3>
+    <span class="role">Founder & Remote Skills Mentor</span>
+    <p>Software developer dedicated to helping Africans build digital skills and earn in USD through remote opportunities.</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
     </div>
-    <div class="team-card">
-      <img src="1.jpg" alt="Team member photo">
-      <h4>Jane Doe</h4>
-      <p>Content Lead – Curates best guides and reviews to help our readers succeed.</p>
-    </div>
-    <div class="team-card">
-      <img src="2.jpg" alt="Team member photo">
-      <h4>John Smith</h4>
-      <p>Community Manager – Supports our audience and organizes learning events.</p>
-    </div>
-  </section>
+  </div>
 
-  <!-- Newsletter CTA -->
-  <section class="cta" aria-labelledby="cta-heading">
-    <h2 id="cta-heading">Get Your Free Starter Checklist</h2>
-    <p>Download our PDF guide to kickstart your remote career.</p>
-    <a href="#" class="btn">Download Free PDF</a>
-
-    <div class="newsletter">
-      <input type="email" placeholder="Enter your email" aria-label="Email address">
-      <button type="button">Subscribe</button>
+  <div class="team-card">
+    <img src="content-lead.jpg" alt="Content Strategy Lead">
+    <h3>Sarah M. Johnson</h3>
+    <span class="role">Head of Content Strategy</span>
+    <p>Leads SEO research and develops practical freelancing and remote work guides tailored for African learners.</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">Medium</a>
     </div>
-  </section>
+  </div>
 
-  <!-- AdSense -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1866481182617555"
-       data-ad-slot="2551943732"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="team-card">
+    <img src="1" alt="Technical Advisor">
+    <h3>Jane Doe</h3>
+    <span class="role">Technical Advisor</span>
+    <p>Expert in web development and AI tools, ensuring Remotize teaches globally competitive digital skills.</p>
+    <div class="socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="team-card">
+    <img src="2" alt="Community Manager">
+    <h3>John Smith</h3>
+    <span class="role">Community & Partnerships Manager</span>
+    <p>Builds strategic partnerships and supports learners transitioning into remote careers.</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <h2>Join the Remotize Team</h2>
+  <p>We are always looking for writers, mentors, and remote professionals passionate about digital empowerment.</p>
+  <a href="contact.html" class="cta-btn">Apply to Join</a>
+</div>
 
 </main>
 
 <footer>
-    <p>&copy; 2026 Remotize</p>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a>
+  &copy; 2026 Remotize | Build Remote Skills. Earn Global Income.
 </footer>
 
 </body>
