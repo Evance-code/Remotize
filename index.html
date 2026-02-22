@@ -5,7 +5,7 @@
 <title>Remotize – Build Remote Skills. Earn Global Income.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Learn tech skills, freelancing, and remote jobs that pay in USD. Start your remote journey today.">
-<link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
+<link rel="icon" href="remotizer-favicon.ico" type="image/x-icon">
 
 <!-- Google Fonts - Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,9 +107,9 @@
     letter-spacing: -0.02em;
   }
 
-  .logo i {
-    font-size: 2rem;
-    color: var(--primary-green);
+  .logo img {
+    height: 40px;
+    width: auto;
     filter: drop-shadow(0 0 8px rgba(0,201,122,0.3));
   }
 
@@ -150,11 +150,12 @@
   }
 
   nav a:hover::after,
-  nav a:focus::after {
+  nav a:focus::after,
+  nav a.active::after {
     width: 100%;
   }
 
-  nav a:hover, nav a:focus {
+  nav a:hover, nav a:focus, nav a.active {
     color: white;
     outline: none;
   }
@@ -224,7 +225,7 @@
     z-index: 2;
   }
 
-  /* Pulse effect (existing) */
+  /* Pulse effect */
   .hero-pulse {
     position: absolute;
     top: -20%;
@@ -697,14 +698,14 @@
 </head>
 <body>
 
-<!-- Modern Sticky Header with Logo -->
+<!-- Modern Sticky Header with Custom Logo -->
 <header>
   <div class="logo">
-    <i class="fas fa-rocket"></i>
+    <img src="remotizer-favicon.ico" alt="Remotize logo">
     <span>Remotize</span>
   </div>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
