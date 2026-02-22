@@ -1,580 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Remotize – Remote Careers & Freelancing Tips</title>
-    <meta name="description" content="Remotize Blog: Remote Careers, Freelancing, Tech Skills – learn how to earn online with Fiverr and other platforms.">
-    <meta name="author" content="Remotize Team">
-    <meta name="theme-color" content="#1e1e2f">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Remotize – Remote Careers & Freelancing Tips</title>
+<meta name="description" content="Remotize Blog: Remote Careers, Freelancing, Tech Skills – learn how to earn online with Fiverr, Upwork, and other platforms.">
+<meta name="author" content="Remotize Team">
+<meta name="theme-color" content="#0b0b1a">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://remotize.com/blog.html">
-    <meta property="og:title" content="Remotize Blog – Remote Work & Freelancing">
-    <meta property="og:description" content="Practical guides to start freelancing on Fiverr and build remote skills.">
-    <meta property="og:image" content="https://remotize.com/images/social-preview.jpg">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://remotize.com/blog.html">
+<meta property="og:title" content="Remotize Blog – Remote Work & Freelancing">
+<meta property="og:description" content="Practical guides to start freelancing on Fiverr, Upwork, and build remote skills.">
+<meta property="og:image" content="https://remotize.com/images/social-preview.jpg">
 
-    <!-- Favicon (modern multiple sizes) -->
-    <link rel="icon" type="image/x-icon" href="remotizers-favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="remotizers-favicon.ico">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Remotize Blog – Remote Work & Freelancing">
+<meta name="twitter:description" content="Practical guides to start freelancing on Fiverr, Upwork, and build remote skills.">
+<meta name="twitter:image" content="https://remotize.com/images/social-preview.jpg">
 
-    <!-- AdSense script – loaded once in head with async -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <style>
-        /* ----- MODERN CSS WITH VARIABLES ----- */
-        :root {
-            --primary-dark: #1e1e2f;
-            --primary-green: #1dbf73;
-            --green-hover: #17a05e;
-            --text-dark: #1e1e2f;
-            --text-soft: #3a3a4e;
-            --bg-light: #fafafa;
-            --card-bg: #ffffff;
-            --border-light: rgba(0,0,0,0.02);
-            --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
-            --shadow-hover: 0 20px 30px rgba(0, 0, 0, 0.08);
-            --spacing-unit: 1rem;
-            --border-radius-card: 24px;
-            --border-radius-btn: 40px;
-            --transition-default: 0.25s ease;
-        }
+<!-- Google Fonts - Inter for modern typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1866481182617555" crossorigin="anonymous"></script>
 
-        body {
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+<style>
+/* Modern CSS Reset & Variables */
+:root {
+    --primary-dark: #0b0b1a;
+    --primary-darker: #050510;
+    --primary-green: #00c97a;
+    --green-hover: #00b36b;
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --text-dark: #1a1a2e;
+    --text-soft: #4a4a6a;
+    --bg-light: #f8fafd;
+    --card-bg: #ffffff;
+    --border-light: rgba(0,0,0,0.03);
+    --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+    --shadow-hover: 0 25px 50px -12px rgba(0,0,0,0.15);
+    --shadow-featured: 0 30px 60px -15px rgba(0,201,122,0.15);
+    --border-radius-card: 28px;
+    --border-radius-btn: 40px;
+    --transition-default: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        /* Header & Footer */
-        header {
-            background: var(--primary-dark);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.25rem;
-        }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
+/* Modern header with gradient */
+header {
+    background: linear-gradient(145deg, var(--primary-dark) 0%, #16213e 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        nav {
-            margin-top: 0.75rem;
-        }
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            transition: border-color var(--transition-default);
-        }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-        nav a:hover {
-            border-bottom-color: var(--primary-green);
-        }
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    position: relative;
+    background: linear-gradient(to right, #fff, #e0e0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-        nav a[aria-current="page"] {
-            border-bottom-color: var(--primary-green);
-        }
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    position: relative;
+}
 
-        footer {
-            background: var(--primary-dark);
-            color: #ccc;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.95rem;
-            margin-top: 3rem;
-        }
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
 
-        footer a {
-            color: #ccc;
-            text-decoration: underline;
-        }
+nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    transition: all var(--transition-default);
+    position: relative;
+    overflow: hidden;
+}
 
-        /* Main content */
-        main {
-            max-width: 1300px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            width: 100%;
-            flex: 1;
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    transition: all var(--transition-default);
+    transform: translateX(-50%);
+}
 
-        /* Blog grid */
-        .blog {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
+nav a:hover,
+nav a[aria-current="page"] {
+    color: white;
+    background: rgba(255,255,255,0.05);
+}
 
-        @media(min-width: 768px) {
-            .blog {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+nav a[aria-current="page"]::after,
+nav a:hover::after {
+    width: 60%;
+}
 
-        .blog h2 {
-            grid-column: 1 / -1;
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            border-left: 6px solid var(--primary-green);
-            padding-left: 1.2rem;
-            margin: 0 0 0.5rem 0;
-        }
+/* Main content */
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
+    width: 100%;
+}
 
-        /* Cards */
-        .blog article {
-            background: var(--card-bg);
-            border-radius: var(--border-radius-card);
-            box-shadow: var(--shadow-sm);
-            padding: 1.8rem;
-            transition: transform var(--transition-default), box-shadow var(--transition-default);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid var(--border-light);
-        }
+/* Categories with modern pills */
+.categories {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
 
-        .blog article:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-        }
+.categories a {
+    display: inline-block;
+    background: rgba(0,201,122,0.08);
+    color: var(--primary-green);
+    padding: 0.6rem 1.4rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-default);
+    border: 1px solid transparent;
+}
 
-        /* Respect user motion preferences */
-        @media (prefers-reduced-motion: reduce) {
-            .blog article:hover {
-                transform: none;
-            }
-        }
+.categories a:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(0,201,122,0.4);
+    border-color: var(--primary-green);
+}
 
-        .post-img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            border-radius: 16px;
-            background-color: #eaeef2;
-            margin-bottom: 1.5rem;
-            border: 1px solid #f0f0f0;
-        }
+/* Featured post with glassmorphism */
+.featured-post {
+    margin-bottom: 4rem;
+}
 
-        .blog h3 {
-            color: var(--primary-green);
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
+.featured-card {
+    display: grid;
+    gap: 2.5rem;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 32px;
+    box-shadow: var(--shadow-featured);
+    border: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
 
-        .blog h4 {
-            font-size: 1.2rem;
-            color: #2d2d44;
-            margin: 1.2rem 0 0.5rem;
-        }
+.featured-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 40px 80px -20px rgba(0,201,122,0.25);
+}
 
-        .blog p, .blog ul, .blog ol {
-            margin-bottom: 1rem;
-            color: var(--text-soft);
-        }
+@media (min-width: 768px) {
+    .featured-card {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
 
-        .blog ul, .blog ol {
-            padding-left: 1.6rem;
-        }
+/* Content wrapper */
+.content-wrapper {
+    display: grid;
+    gap: 2.5rem;
+}
 
-        .blog li {
-            margin-bottom: 0.4rem;
-        }
+@media (min-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 3fr 1.2fr;
+    }
+}
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: white;
-            font-weight: 600;
-            padding: 0.9rem 1.8rem;
-            border-radius: var(--border-radius-btn);
-            text-decoration: none;
-            margin-top: 1rem;
-            align-self: flex-start;
-            transition: background-color var(--transition-default), transform 0.1s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(29, 191, 115, 0.3);
-        }
+/* Blog grid */
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
 
-        .btn:hover {
-            background-color: var(--green-hover);
-            transform: scale(1.02);
-        }
+@media (min-width: 768px) {
+    .blog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        .btn:active {
-            transform: scale(0.98);
-        }
+.blog article {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    transition: all var(--transition-default);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-light);
+    position: relative;
+    top: 0;
+}
 
-        /* POPUP */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            backdrop-filter: blur(6px);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 1rem;
-        }
+.blog article:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(0,201,122,0.2);
+}
 
-        .popup-content {
-            background-color: var(--card-bg);
-            padding: 2.5rem 2rem;
-            border-radius: 32px;
-            max-width: 440px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
-            animation: fadeSlide 0.3s ease;
-        }
+/* Images with modern styling */
+.post-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #eaeef2, #ffffff);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: transform var(--transition-default);
+}
 
-        @keyframes fadeSlide {
-            from { opacity: 0.6; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.blog article:hover .post-img {
+    transform: scale(1.02);
+}
 
-        .popup-close {
-            position: absolute;
-            top: 16px;
-            right: 22px;
-            font-size: 32px;
-            cursor: pointer;
-            color: #777;
-            transition: color 0.2s, background 0.2s;
-            line-height: 1;
-            background: none;
-            border: none;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
+/* Typography */
+.blog h3 {
+    color: var(--text-dark);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
 
-        .popup-close:hover {
-            color: var(--primary-green);
-            background: #f0f0f0;
-        }
+.blog h3 a {
+    color: inherit;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--text-dark) 0%, var(--text-dark) 50%, var(--primary-green) 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease;
+}
 
-        #signup-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 1.5rem;
-        }
+.blog h3 a:hover {
+    background-position: right center;
+}
 
-        #signup-form input[type="email"] {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 60px;
-            border: 1px solid #ddd;
-            font-size: 1rem;
-            transition: 0.2s;
-            margin-bottom: 0.8rem;
-        }
+.blog p, .blog ul, .blog ol {
+    margin-bottom: 1rem;
+    color: var(--text-soft);
+    font-size: 1rem;
+    line-height: 1.7;
+}
 
-        #signup-form input[type="email"]:focus {
-            outline: none;
-            border-color: var(--primary-green);
-            box-shadow: 0 0 0 3px rgba(29,191,115,0.2);
-        }
+.blog ul, .blog ol {
+    padding-left: 1.5rem;
+}
 
-        #signup-form .btn {
-            width: 100%;
-        }
+.blog li {
+    margin-bottom: 0.4rem;
+}
 
-        .popup small {
-            color: #666;
-            font-size: 0.8rem;
-            margin-top: 1rem;
-            display: block;
-        }
-    </style>
+/* Buttons - modern gradient style */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-green), #00a86b);
+    color: white;
+    font-weight: 600;
+    padding: 0.9rem 2rem;
+    border-radius: var(--border-radius-btn);
+    text-decoration: none;
+    margin-top: 1rem;
+    align-self: flex-start;
+    transition: all var(--transition-default);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px -5px rgba(0,201,122,0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #00a86b, var(--primary-green));
+    opacity: 0;
+    transition: opacity var(--transition-default);
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -8px rgba(0,201,122,0.4);
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Sidebar */
+.sidebar-box {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 28px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-light);
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+
+.sidebar-box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.sidebar-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, var(--text-dark), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-box li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar-box a {
+    color: var(--text-soft);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s, padding-left 0.2s;
+    display: inline-block;
+}
+
+.sidebar-box a:hover {
+    color: var(--primary-green);
+    padding-left: 5px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(145deg, var(--primary-dark), var(--primary-darker));
+    color: #ccc;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--primary-green);
+}
+
+/* Modern popup modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.popup[aria-hidden="false"] {
+    display: flex;
+}
+
+.popup-content {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(15px);
+    padding: 2.5rem 2rem;
+    border-radius: 48px;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.4);
+    animation: fadeSlideUp 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+    transition: all 0.2s;
+    line-height: 1;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.popup-close:hover {
+    color: var(--primary-green);
+    background: rgba(0,201,122,0.1);
+    transform: rotate(90deg);
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+#signup-form input[type="email"] {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.9);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+#signup-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(0,201,122,0.2);
+}
+
+#signup-form .btn {
+    width: 100%;
+    margin-top: 0;
+}
+
+.popup small {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+    display: block;
+}
+
+#popup-status {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Remotize</h1>
-        <p>Build Remote Skills. Earn Global Income.</p>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html" aria-current="page">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="blog" aria-labelledby="latest-heading">
-            <h2 id="latest-heading">Latest Articles</h2>
+<header>
+<h1>Remotize</h1>
+<p>Build Remote Skills. Earn Global Income.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="blog.html" aria-current="page">Blog</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
-            <!-- Post 1 -->
-            <article>
-                <img src="headway-5QgIuuBxKwM-unsplash.jpg"
-    
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Person working on laptop, starting freelancing on Fiverr"
-                     class="post-img"
-                     loading="lazy">
-                <h3>How to Start Freelancing on Fiverr and Earn Your First USD</h3>
-                <p>Are you looking to start your freelancing journey but don’t know where to begin? Fiverr is perfect for beginners to showcase their skills and get paid in USD.</p>
-                <h4>Step 1: Create Your Fiverr Account</h4>
-                <p>Sign up on Fiverr for free and complete your profile. Highlight your skills—even if you’re just starting out!</p>
-                <h4>Step 2: Choose Your First Gig</h4>
-                <p>Pick a service you can confidently offer, like writing, graphic design, programming, or digital marketing.</p>
-                <h4>Step 3: Promote Your Services</h4>
-                <p>Share your gigs online. The more visibility you get, the faster you earn.</p>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Join Fiverr Now</a>
-            </article>
+<main>
 
-            <!-- Post 2 -->
-            <article>
-                <img src="jo-szczepanska-5aiRb5f464A-unsplash (1).jpg"
-                     
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Various icons representing Fiverr services"
-                     class="post-img"
-                     loading="lazy">
-                <h3>Top 5 Fiverr Services You Can Start as a Beginner</h3>
-                <p>Fiverr offers tons of opportunities to earn money online. Here are the top 5 services for beginners:</p>
-                <ol>
-                    <li><strong>Writing & Translations:</strong> Blog posts, copywriting, or translation gigs.</li>
-                    <li><strong>Graphic Design:</strong> Logo creation, social media graphics, or banners.</li>
-                    <li><strong>Digital Marketing:</strong> Social media management, SEO, or ad campaigns.</li>
-                    <li><strong>Programming & Tech:</strong> Website building, WordPress setup, or bug fixes.</li>
-                    <li><strong>Video & Animation:</strong> Short videos, intros, or editing.</li>
-                </ol>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Join Fiverr Now</a>
-            </article>
+<section class="featured-post">
+<article class="featured-card">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Remote work setup" class="post-img" loading="lazy">
+<div>
+<h2><a href="blog/ultimate-remote-guide.html" style="color: inherit; text-decoration: none;">Ultimate Guide to Starting a Remote Career in 2026</a></h2>
+<p>Step-by-step guide to earning online, building skills, and working from anywhere.</p>
+<a href="blog/ultimate-remote-guide.html" class="btn">Read Full Guide</a>
+</div>
+</article>
+</section>
 
-            <!-- Post 3 -->
-            <article>
-                <img src="kobu-agency-7okkFhxrxNw-unsplash.jpg"
-                  
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Fiverr earnings dashboard showing $100 earned"
-                     class="post-img"
-                     loading="lazy">
-                <h3>How to Earn Your First $100 on Fiverr Quickly</h3>
-                <p>Making your first $100 on Fiverr might seem difficult, but with the right strategy, it’s achievable in just a few weeks.</p>
-                <h4>Tip 1: Pick a Simple Gig</h4>
-                <p>Start with a service you can do quickly and confidently. Beginners often succeed with writing, graphic design, or simple tech tasks.</p>
-                <h4>Tip 2: Set Competitive Prices</h4>
-                <p>Offer affordable packages to attract your first buyers. You can increase your rates as you get reviews.</p>
-                <h4>Tip 3: Promote Everywhere</h4>
-                <p>Share your Fiverr gig on your blog, social media, or online communities to get your first clients fast.</p>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Join Fiverr</a>
-            </article>
+<div class="categories">
+<a href="category/freelancing.html">Freelancing</a>
+<a href="category/remote-jobs.html">Remote Jobs</a>
+<a href="category/digital-skills.html">Digital Skills</a>
+<a href="category/online-business.html">Online Business</a>
+</div>
 
-            <!-- Post 4 -->
-            <article>
-                <img src="Tools.jpg"
-                    
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Collection of digital tools for remote work"
-                     class="post-img"
-                     loading="lazy">
-                <h3>Top 10 Free Tools for Remote Work in 2026</h3>
-                <p>Working remotely is easier with the right tools. Here are the top 10 free tools every remote worker should use:</p>
-                <ul>
-                    <li>Trello – Organize projects and tasks visually.</li>
-                    <li>Slack – Communicate with your team efficiently.</li>
-                    <li>Canva – Create stunning graphics for free.</li>
-                    <li>Google Workspace – Docs, Sheets, Gmail in one place.</li>
-                    <li>Zoom – Video calls and online meetings.</li>
-                    <li>Notion – All-in-one workspace for notes and tasks.</li>
-                    <li>Grammarly – Improve writing automatically.</li>
-                    <li>Clockify – Track your work hours.</li>
-                    <li>Asana – Project management made simple.</li>
-                    <li>Fiverr – Hire freelancers for tasks you can’t do yourself.</li>
-                </ul>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Check Fiverr Services</a>
-            </article>
+<div class="content-wrapper">
 
-            <!-- Post 5 -->
-            <article>
-                <img src="Money Online.jpg"
-                     
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Ways to make money online illustrated"
-                     class="post-img"
-                     loading="lazy">
-                <h3>How to Make Money Online Without Experience</h3>
-                <p>Starting online income can feel intimidating if you have no experience. Here are practical ways to start earning today:</p>
-                <ul>
-                    <li>Freelance Writing – Start small on Fiverr or Upwork.</li>
-                    <li>Graphic Design – Use Canva or free tools.</li>
-                    <li>Social Media Management – Manage small business accounts remotely.</li>
-                    <li>Sell Digital Products – Guides, templates, printables.</li>
-                    <li>Fiverr Services – Offer simple tasks like data entry or basic design.</li>
-                </ul>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Start Selling on Fiverr</a>
-            </article>
+<section class="blog" aria-labelledby="latest-heading">
+<h2 id="latest-heading" style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; grid-column: 1 / -1; color: var(--text-dark);">Latest Articles</h2>
 
-            <!-- Post 6 -->
-            <article>
-                <img src="Freelance.jpg"
-    
-                     sizes="(max-width: 768px) 100vw, 50vw"
-                     alt="Logos of freelance platforms including Fiverr, Upwork, Freelancer"
-                     class="post-img"
-                     loading="lazy">
-                <h3>Best Freelance Platforms Besides Fiverr</h3>
-                <p>While Fiverr is great, it’s smart to diversify your freelancing opportunities. Here are other platforms to explore:</p>
-                <ul>
-                    <li>Upwork – Longer-term projects and higher-paying gigs.</li>
-                    <li>Freelancer – Wide variety of freelance jobs for beginners.</li>
-                    <li>PeoplePerHour – Flexible short-term projects you can complete quickly.</li>
-                    <li>99Designs – Focused on design and creative work.</li>
-                    <li>Fiverr – Still a top choice for quick gigs and beginner-friendly projects.</li>
-                </ul>
-                <a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Check Fiverr Services</a>
-            </article>
-        </section>
+<article>
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop" alt="Person working on laptop" class="post-img" loading="lazy">
+<h3><a href="blog/start-freelancing-fiverr.html">How to Start Freelancing on Fiverr and Earn Your First USD</a></h3>
+<p>Learn practical steps for beginners to start earning on Fiverr today.</p>
+<a href="https://www.fiverr.com/" class="btn" target="_blank" rel="noopener">Start on Fiverr</a>
+</article>
 
-        <!-- Single AdSense placement (example) -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1866481182617555"
-             data-ad-slot="2551943732"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </main>
+<article>
+<img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&h=400&fit=crop" alt="Freelance services icons" class="post-img" loading="lazy">
+<h3><a href="blog/top-fiverr-services.html">Top 5 Fiverr Services for Beginners</a></h3>
+<ol>
+<li>Writing & Translation</li>
+<li>Graphic Design</li>
+<li>Digital Marketing</li>
+<li>Programming & Tech</li>
+<li>Video & Animation</li>
+</ol>
+<a href="https://www.canva.com/" class="btn" target="_blank" rel="noopener">Design with Canva</a>
+</article>
 
-    <footer>
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms & Conditions</a>
-        <p>© 2026 Remotize</p>
-    </footer>
+<article>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Fiverr earnings dashboard" class="post-img" loading="lazy">
+<h3><a href="blog/earn-first-100-fiverr.html">How to Earn Your First $100 on Fiverr Quickly</a></h3>
+<ul>
+<li>Pick a simple gig you can deliver well.</li>
+<li>Set competitive prices.</li>
+<li>Promote everywhere online.</li>
+</ul>
+<a href="https://www.grammarly.com/" class="btn" target="_blank" rel="noopener">Write with Grammarly</a>
+</article>
 
-    <!-- Email Signup Popup (improved accessibility) -->
-    <div id="email-popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc">
-        <div class="popup-content">
-            <button class="popup-close" aria-label="Close newsletter popup">&times;</button>
-            <h3 id="popup-title">📬 Get Free Remote Work Tips!</h3>
-            <p id="popup-desc">Subscribe to our newsletter and receive guides, tips, and exclusive Fiverr resources.</p>
-            <form id="signup-form" action="#" method="post">
-                <input type="email" name="email" id="email" placeholder="Your email address" required aria-label="Email address">
-                <button type="submit" class="btn">Subscribe</button>
-            </form>
-            <small>No spam. Unsubscribe anytime.</small>
-        </div>
-    </div>
+<article>
+<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&h=400&fit=crop" alt="Digital tools for remote work" class="post-img" loading="lazy">
+<h3><a href="blog/top-remote-work-tools.html">Top 10 Free Tools for Remote Work in 2026</a></h3>
+<ul>
+<li>Trello</li>
+<li>Slack</li>
+<li>Canva</li>
+<li>Google Workspace</li>
+<li>Zoom</li>
+<li>Notion</li>
+<li>Grammarly</li>
+<li>Clockify</li>
+<li>Asana</li>
+<li>Fiverr</li>
+</ul>
+<a href="https://www.notion.so/" class="btn" target="_blank" rel="noopener">Try Notion</a>
+</article>
 
-    <script defer>
-        (function() {
-            // Popup logic with localStorage to avoid repeated popups after subscription
-            const popup = document.getElementById('email-popup');
-            const closeBtn = document.querySelector('.popup-close');
-            const signupForm = document.getElementById('signup-form');
-            const emailInput = document.getElementById('email');
+<article>
+<img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&h=400&fit=crop" alt="Make money online" class="post-img" loading="lazy">
+<h3><a href="blog/make-money-online-no-experience.html">How to Make Money Online Without Experience</a></h3>
+<ul>
+<li>Freelance Writing</li>
+<li>Graphic Design</li>
+<li>Social Media Management</li>
+<li>Sell Digital Products</li>
+<li>Fiverr Tasks</li>
+</ul>
+<a href="https://www.freelancer.com/" class="btn" target="_blank" rel="noopener">Join Freelancer</a>
+</article>
 
-            // Check if user already subscribed (dummy flag)
-            if (localStorage.getItem('remotize_subscribed') === 'true') {
-                return; // Don't show popup
+<article>
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" alt="Freelance platforms logos" class="post-img" loading="lazy">
+<h3><a href="blog/best-freelance-platforms.html">Best Freelance Platforms Besides Fiverr</a></h3>
+<ul>
+<li>Upwork</li>
+<li>Freelancer</li>
+<li>PeoplePerHour</li>
+<li>99Designs</li>
+<li>Fiverr</li>
+</ul>
+<a href="https://www.upwork.com/" class="btn" target="_blank" rel="noopener">Explore Upwork</a>
+</article>
+
+</section>
+
+<aside class="sidebar">
+<div class="sidebar-box">
+<h3>Start Here</h3>
+<p>New to remote work? Read our beginner roadmap.</p>
+<a href="blog/beginner-roadmap.html" class="btn">Start Guide</a>
+</div>
+
+<div class="sidebar-box">
+<h3>Recommended Tools</h3>
+<ul>
+<li><a href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr</a></li>
+<li><a href="https://www.upwork.com/" target="_blank" rel="noopener">Upwork</a></li>
+<li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></li>
+<li><a href="https://www.grammarly.com/" target="_blank" rel="noopener">Grammarly</a></li>
+<li><a href="https://www.payoneer.com/" target="_blank" rel="noopener">Payoneer</a></li>
+<li><a href="https://www.hostinger.com/" target="_blank" rel="noopener">Hostinger</a></li>
+</ul>
+</div>
+</aside>
+
+</div>
+
+<!-- AdSense -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1866481182617555" data-ad-slot="2551943732" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</main>
+
+<footer>
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
+<p>© 2026 Remotize</p>
+</footer>
+
+<!-- Newsletter Popup (Accessible Modal) -->
+<div id="email-popup" class="popup" aria-hidden="true" aria-labelledby="popup-title" aria-describedby="popup-description" role="dialog">
+<div class="popup-content">
+<button class="popup-close" aria-label="Close" id="popup-close-btn">&times;</button>
+<h3 id="popup-title" style="font-size: 2rem; margin-bottom: 0.5rem;">📬 Get Free Remote Work Tips!</h3>
+<p id="popup-description" style="color: var(--text-soft);">Subscribe to receive guides and exclusive freelancing resources.</p>
+<form id="signup-form" action="https://formspree.io/f/your-form-id" method="POST">
+<input type="email" name="email" placeholder="Your email address" required>
+<button type="submit" class="btn">Subscribe</button>
+</form>
+<div id="popup-status"></div>
+<small>No spam. Unsubscribe anytime.</small>
+</div>
+</div>
+
+<script>
+(function() {
+    const popup = document.getElementById('email-popup');
+    const closeBtn = document.getElementById('popup-close-btn');
+    const signupForm = document.getElementById('signup-form');
+    const popupStatus = document.getElementById('popup-status');
+
+    // Check if already subscribed
+    if (localStorage.getItem('remotize_subscribed') === 'true') {
+        return; // Don't show popup
+    }
+
+    // Show popup after 5 seconds
+    let popupTimer = setTimeout(() => {
+        popup.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+    }, 5000);
+
+    function closePopup() {
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        clearTimeout(popupTimer);
+        document.querySelector('.blog article a')?.focus();
+    }
+
+    closeBtn.addEventListener('click', closePopup);
+
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popup.getAttribute('aria-hidden') === 'false') {
+            closePopup();
+        }
+    });
+
+    // Handle form submission with fetch
+    signupForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = signupForm.querySelector('input[type="email"]').value.trim();
+        if (!email) {
+            popupStatus.textContent = 'Please enter a valid email.';
+            popupStatus.style.color = 'red';
+            return;
+        }
+
+        const submitBtn = signupForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        popupStatus.textContent = 'Submitting...';
+        popupStatus.style.color = '';
+
+        try {
+            // Replace with your actual Formspree endpoint
+            const response = await fetch('https://formspree.io/f/your-form-id', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email }),
+            });
+
+            if (response.ok) {
+                popupStatus.textContent = '✅ Thanks! You\'re subscribed.';
+                popupStatus.style.color = 'var(--primary-green)';
+                localStorage.setItem('remotize_subscribed', 'true');
+                setTimeout(closePopup, 2000);
+                signupForm.reset();
+            } else {
+                popupStatus.textContent = '❌ Something went wrong. Please try again.';
+                popupStatus.style.color = 'red';
+                submitBtn.disabled = false;
             }
+        } catch (error) {
+            popupStatus.textContent = '❌ Network error. Please try again.';
+            popupStatus.style.color = 'red';
+            submitBtn.disabled = false;
+        }
+    });
 
-            // Show popup after 5 seconds
-            let popupTimer = setTimeout(() => {
-                if (popup) {
-                    popup.style.display = 'flex';
-                    // Focus first input for accessibility
-                    if (emailInput) emailInput.focus();
-                    // Trap focus (simple version: focus stays inside)
-                    document.addEventListener('focus', trapFocus, true);
-                }
-            }, 5000);
+    // Trap focus inside modal
+    popup.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            const focusable = popup.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
 
-            function closePopup() {
-                if (popup) popup.style.display = 'none';
-                clearTimeout(popupTimer);
-                document.removeEventListener('focus', trapFocus, true);
-            }
-
-            function trapFocus(e) {
-                if (!popup || popup.style.display !== 'flex') return;
-                const focusable = popup.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-                const first = focusable[0];
-                const last = focusable[focusable.length - 1];
-                if (e.target === popup) {
-                    e.preventDefault();
-                    first.focus();
-                }
-                if (e.shiftKey && e.target === first) {
+            if (e.shiftKey) {
+                if (document.activeElement === first) {
                     e.preventDefault();
                     last.focus();
-                } else if (!e.shiftKey && e.target === last) {
+                }
+            } else {
+                if (document.activeElement === last) {
                     e.preventDefault();
                     first.focus();
                 }
             }
-
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closePopup);
-            }
-
-            window.addEventListener('click', (e) => {
-                if (e.target === popup) {
-                    closePopup();
-                }
-            });
-
-            if (signupForm) {
-                signupForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const email = emailInput.value.trim();
-                    if (email) {
-                        alert(`✨ Thanks! You're subscribed with: ${email}`);
-                        localStorage.setItem('remotize_subscribed', 'true');
-                        closePopup();
-                        signupForm.reset();
-                    } else {
-                        alert('Please enter a valid email.');
-                    }
-                });
-            }
-
-            window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && popup.style.display === 'flex') {
-                    closePopup();
-                }
-            });
-        })();
-    </script>
+        }
+    });
+})();
+</script>
 </body>
 </html>
