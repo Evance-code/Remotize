@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>About Remotize – Build Remote Skills. Earn Global Income</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn about Remotize, our mission, team, and how we help Africans build remote skills and earn globally.">
+<meta name="description" content="Learn about Remotize, our mission, vision, and how we help Africans build remote skills and earn globally.">
 <link rel="icon" href="images/favicon.png">
 
 <style>
@@ -26,7 +26,11 @@ body{
   background:var(--bg-light);
   color:var(--text-dark);
   line-height:1.6;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
+
 /* NAVBAR */
 header{
   background: linear-gradient(135deg,#1e1e2f,#2a2a45);
@@ -67,14 +71,15 @@ header nav a.active{color:var(--primary-green);}
 }
 .hero h1{font-size:2.5rem;margin-bottom:1rem;}
 .hero p{opacity:0.9;margin-bottom:2rem;}
-/* ABOUT SECTIONS */
+
+/* SECTIONS */
 .section{
   max-width:1200px;
   margin:2rem auto;
   padding:0 1.5rem;
 }
 .section h2{text-align:center;margin-bottom:2rem;}
-.section p{margin-bottom:1rem; color:var(--text-soft);}
+.section p{margin-bottom:1rem;color:var(--text-soft);}
 .cards{
   display:flex;
   flex-wrap:wrap;
@@ -89,13 +94,16 @@ header nav a.active{color:var(--primary-green);}
   width:250px;
   text-align:center;
 }
+.card h3{margin-bottom:0.5rem;}
+.card p{color:var(--text-soft);}
 .card img{
-  width:100px;
-  height:100px;
+  width:80px;
+  height:80px;
+  margin-bottom:1rem;
   border-radius:50%;
   object-fit:cover;
-  margin-bottom:1rem;
 }
+
 /* CTA */
 .cta{
   text-align:center;
@@ -113,15 +121,20 @@ header nav a.active{color:var(--primary-green);}
   color:var(--primary-green);
   font-weight:600;
   cursor:pointer;
+  transition:0.3s;
 }
+.cta button:hover{background:#f0f0f0; color:var(--primary-dark);}
+
 /* FOOTER */
 footer{
   background:var(--primary-dark);
   color:#ccc;
   text-align:center;
   padding:2rem 1rem;
+  margin-top:auto;
 }
 footer a{color:#ccc;text-decoration:underline;margin:0 0.5rem;}
+
 /* RESPONSIVE */
 @media(max-width:768px){
   .cards{flex-direction:column;align-items:center;}
@@ -149,43 +162,71 @@ footer a{color:#ccc;text-decoration:underline;margin:0 0.5rem;}
 <!-- MISSION & VISION -->
 <section class="section">
 <h2>Our Mission & Vision</h2>
-<p><strong>Mission:</strong> To empower individuals with the skills and mentorship needed to succeed in the global remote economy.</p>
-<p><strong>Vision:</strong> A world where every African can build a sustainable online career and achieve financial freedom.</p>
-</section>
-
-<!-- TEAM -->
-<section class="section">
-<h2>Meet Our Team</h2>
-<div class="cards">
-<div class="card">
-<img src="images/member1.jpg" alt="Founder Photo">
-<h3>Evance Katanga</h3>
-<p>Founder & CEO – Leading Remotize’s vision to empower Africans digitally and globally.</p>
-</div>
-<div class="card">
-<img src="images/member2.jpg" alt="Marketing Lead">
-<h3>Jane Doe</h3>
-<p>Content & Marketing Lead – Curates guides, blogs, and strategies for learners’ success.</p>
-</div>
-<div class="card">
-<img src="images/member3.jpg" alt="Technical Lead">
-<h3>John Smith</h3>
-<p>Technical Lead – Oversees training programs and supports learners with technical guidance.</p>
-</div>
-</div>
+<p><strong>Mission:</strong> Empower individuals with digital skills and mentorship to succeed in the global remote economy.</p>
+<p><strong>Vision:</strong> A world where every African can build sustainable online careers and achieve financial freedom.</p>
 </section>
 
 <!-- WHY CHOOSE REMOTIZE -->
 <section class="section">
 <h2>Why Choose Remotize?</h2>
-<p>We provide step-by-step guidance, practical resources, and a supportive community to help you succeed in freelancing and remote work.</p>
-<p>Our programs focus on high-demand skills, global payment opportunities, and mentorship from experts who have successfully built online careers.</p>
+<div class="cards">
+<div class="card">
+<h3>Step-by-Step Guidance</h3>
+<p>We provide structured learning paths so you can progress from beginner to professional efficiently.</p>
+</div>
+<div class="card">
+<h3>High-Demand Skills</h3>
+<p>Focus on freelancing skills like writing, design, marketing, programming, and online business growth.</p>
+</div>
+<div class="card">
+<h3>Global Income Opportunities</h3>
+<p>Learn how to work with international clients and earn in USD, Euro, and other currencies.</p>
+</div>
+<div class="card">
+<h3>Supportive Community</h3>
+<p>Join our community to connect with mentors and peers who will guide you along your journey.</p>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+<h2>How It Works</h2>
+<div class="cards">
+<div class="card">
+<h3>1. Learn Digital Skills</h3>
+<p>Start with courses and resources to master skills that are in demand globally.</p>
+</div>
+<div class="card">
+<h3>2. Apply Skills Practically</h3>
+<p>Work on real projects or practice gigs to gain experience and confidence.</p>
+</div>
+<div class="card">
+<h3>3. Start Earning</h3>
+<p>Apply for remote jobs, freelance gigs, or start your online business to generate income.</p>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>What Our Students Say</h2>
+<div class="cards">
+<div class="card">
+<p>"Thanks to Remotize, I learned design skills and now earn $500/month remotely!"</p>
+<h3>- Aisha M.</h3>
+</div>
+<div class="card">
+<p>"The mentorship and practical steps helped me land my first Fiverr client easily."</p>
+<h3>- John K.</h3>
+</div>
+</div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Join Our Community Today!</h2>
-<p>Start learning skills that can earn you global income.</p>
+<h2>Join Remotize Today!</h2>
+<p>Start learning remote skills and earning globally from anywhere.</p>
 <button onclick="window.location.href='contact.html'">Get Started</button>
 </section>
 
