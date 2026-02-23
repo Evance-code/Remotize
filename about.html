@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Remotize – Build Remote Skills. Earn Global Income</title>
 <meta name="description" content="Learn about Remotize, our mission, vision, impact, team, partners, and how we help Africans build remote skills and earn globally.">
-<link rel="icon" href="remotizers-favicon.ico" type="image/x-icon">
+<link rel="icon" href="leaf.ico" type="image/x-icon">
 
 <!-- Google Fonts - Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,25 +87,45 @@ header {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
-.logo img {
-    height: 40px;
-    width: auto;
-    filter: drop-shadow(0 0 8px rgba(0,201,122,0.3));
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: white;
+  position: relative;
+  margin: 0;
 }
 
-.logo span {
-    background: linear-gradient(to right, #fff, #d4d4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* White part */
+.logo-text {
+  color: #ffffff;
+}
+
+/* Red "tize" */
+.logo-text .red {
+  color: #ff4d4d;
+}
+
+/* Leaf above R */
+.logo-text .leaf {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-text .leaf::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 8px;
+  width: 18px;
+  height: 12px;
+  background: white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-35deg);
 }
 
 nav {
@@ -653,9 +673,10 @@ footer a:hover {
 <!-- Modern Sticky Header with Custom Logo -->
 <header>
   <div class="logo">
-    <img src="Remotize.png" alt="Remotize logo">
-    <span>Remotize</span>
-  </div>
+  <h1 class="logo-text">
+    <span class="leaf">R</span>emo<span class="red">tize</span>
+  </h1>
+</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html" class="active">About</a>
