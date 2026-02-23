@@ -75,56 +75,46 @@ header {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
-    display: block;
-}
-
-.logo span {
-    font-size: 2rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #fff, #d4d4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  display: flex;
+  align-items: center;
 }
 
 .logo-text {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: white;
-    position: relative;
-    margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: white;
+  position: relative;
+  margin: 0;
 }
 
+/* White part */
+.logo-text {
+  color: #ffffff;
+}
+
+/* Red "tize" */
 .logo-text .red {
-    color: #ff4d4d;
+  color: #ff4d4d;
 }
 
+/* Leaf above R */
 .logo-text .leaf {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .logo-text .leaf::before {
-    content: "";
-    position: absolute;
-    top: -14px;
-    left: 8px;
-    width: 18px;
-    height: 12px;
-    background: white;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-35deg);
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 8px;
+  width: 18px;
+  height: 12px;
+  background: white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-35deg);
 }
-
 nav {
     display: flex;
     gap: 1.5rem;
