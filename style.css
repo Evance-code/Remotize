@@ -377,6 +377,89 @@ h2:not(.hero-content h2):not(.cta h2) {
 }
 
 /* ===== FEATURES / CARDS (generic card grid) ===== */
+/* Featured blog posts section */
+.featured-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual post card */
+.post-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Image inside card */
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;  /* Ensures images keep their proportions */
+    display: block;
+}
+
+/* Card text content */
+.post-card h4 {
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.post-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0 1rem 1rem;
+    flex: 1;  /* Pushes the button down */
+}
+
+/* Small button style */
+.btn-small {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    align-self: flex-start; /* Aligns button to left inside card */
+}
+
+.btn-small:hover {
+    background-color: #005fa3;
+}
+
+/* Section heading */
+.section-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+/* Optional: Add some spacing around the whole section */
+section[aria-labelledby="featured-posts-heading"] {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
 .features,
 .cards {
     display: flex;
